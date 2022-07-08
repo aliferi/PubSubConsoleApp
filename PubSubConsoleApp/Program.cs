@@ -1,4 +1,22 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+using Spectre.Console.Cli;
 
-var ApiKey = "paKD3g.xqj7aw:BEQv3Lz0R4RRX665U3PJVJTNmX-uq9IaJ0PjqJWxfNs";
+public class Program
+{
+    const string Apikey = "paKD3g.xqj7aw:BEQv3Lz0R4RRX665U3PJVJTNmX-uq9IaJ0PjqJWxfNs";
+
+    public static async Task<int> Main(string[] args)
+    {
+        var app = new CommandApp();
+
+        app.Configure(config =>
+        {
+            
+        });
+
+        return await app.RunAsync(args);
+    }
+
+}
+
+   
